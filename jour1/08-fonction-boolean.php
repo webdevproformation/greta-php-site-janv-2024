@@ -99,3 +99,9 @@ $c = false ;
 $c = 0.0 ;
 $c = "0"; 
 unset($c);  
+
+
+// fonction sur fonction 
+// require require_once
+// POO => private / extends 
+// namespace 
