@@ -144,3 +144,15 @@ echo htmlspecialchars($phraseHtml) . "<br>"; // <p> apparait dans le navigateur
 // &lt;p&gt;
 
 // htmlentities() => è => &egrave; alors que htmlspecialchars() non 
+
+// créer le fichier 04-exo.php 
+
+// dans ce fichier vous allez créer une chaine de caractère $phrase qui contient le texte suivant 
+
+$phrase = "je suis allez visiter le site internet wikipedia.com"; 
+
+// remplacer le .com par .fr
+// ajouter devant le mot wikipedia => https://
+// mettre en majuscule le mot site 
+
+// "je suis allez visiter le Site internet https://wikipedia.fr"
