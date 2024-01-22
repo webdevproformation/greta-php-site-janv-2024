@@ -36,3 +36,17 @@ foreach($phrase3Tableau as $key => $value){
 }
 
 echo implode(" ", $nouvellePhrase); 
+
+
+// créer le fichier 05-exo.php 
+
+// dans ce fichier vous allez écrire la string suivante
+
+$url = "https://localhost/index.php?id=10&sort=DESC/" ;
+
+// supprimer le dernier / dans l'url
+// insérer entre localhost/ et index.php => le texte jour1/
+// remplacer id=10 par identifiant= 10
+
+// resultat attendu
+// https://localhost/jour1/index.php?identifiant=10&sort=DESC
