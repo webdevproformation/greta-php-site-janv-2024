@@ -92,3 +92,16 @@ class Articles{
         return $this;
     }
 }
+
+
+// créer un nouveau fichier 08-exo.php
+// dans ce fichier vous allez créer une class qui va être synchronisé avec une table dans votre base de données 
+// cette table s'appelle Categorie
+// cette table contient les colonnes suivantes 
+// id
+// nom
+// description
+// date_creation
+// status 
+
+// créer la class pour respecter le design pattern ActiveRecord 
