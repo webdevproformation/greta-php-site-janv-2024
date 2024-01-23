@@ -42,3 +42,22 @@ echo $c->description() . "<br>";
 //  Fatal error: Uncaught Error: Call to private method Carre::calcul() from global scope  
 // sécuriser la manière d'utiliser la class 
 // permet en coup d'oeil de voiture si une propriété ou une méthode elle ne doit pas être utiliser hors de la class 
+
+
+// créer le fichier 06-exo.php
+
+// ce fichier contient une class Exercice 
+// dispose de 4 attributs 
+//    technologies public tableau
+//    sujet        public texte
+//    duree        private chiffre entier
+//    notes         private tableau de chiffre à virgule
+
+// initialiser ces 4 valeurs via un constructeur
+//  technologies => tableau 
+//  sujet chaine de caractères
+//  duree chiffre positif et entier
+//  note positif et entier 
+// créer une méthode privée qui permet calculer la moyenne des notes 
+// créer une méthode public qui afficher du texte qui est retourne le texte suivant
+// pour le sujet $sujet j'ai eu la note resultat du calcul dans la methode privee
