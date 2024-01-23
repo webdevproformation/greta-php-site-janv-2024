@@ -38,13 +38,13 @@ echo call_user_func("b","je ne connais pas encore Angular ???" , "mars");
 echo call_user_func($tutu,"je ne connais pas encore Angular ???" , "mars"); 
 
 
-function c ( array $liste , int $distance , bool $test ) :string {
-    $first = $liste[0]; // récupérer la 1ère valeur tableau 
-    $total = $first * $distance ; // multiplication
-    if( $test ){
-        return $total . " euros <br>";
+function c ( array $catalogue , int $prixUnitaire , bool $isEuro ) :string {
+    $first = $catalogue[0]; // récupérer la 1ère valeur tableau 
+    $prixTTC = $first * $prixUnitaire ; // multiplication
+    if( $isEuro ){
+        return $prixTTC . " euros <br>";
     }else {
-        return $total . " dollars <br>";
+        return $prixTTC . " dollars <br>";
     }
 }
 echo c([10], 200, true) ; // 2000 euros
@@ -53,3 +53,20 @@ $toutou = "c";
 echo $toutou([5], 20 , false) ; // 100 dollars
 
 echo call_user_func("c" , [30], 10 , true); // 300 euros
+
+echo call_user_func_array('c',[ [10], 22 , true ] ); // 220 dollars
+
+
+// cas pratique 
+// crée un fichier 03-exo.php 
+
+// dans ce fichier vous allez créer une function qui s'appelle 
+// aireCercle
+// elle prend un paramètre de type chiffre à virgule $rayon
+// retourne du texte
+// dans la fonction vous allez écrire les instructions suivantes 
+// return "un cercle de rayon $rayon a une aire de 3.14 * $rayon * $rayon"
+
+// exécuter cette fonction de 4 manières différentes
+
+
