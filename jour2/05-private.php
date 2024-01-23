@@ -29,7 +29,6 @@ class Carre {
     private function  calcul() : int{
         return $this->cote ** 2; 
     }
-
     public function description(): string {
         return "une carre de coté {$this->cote} a une aire de " . $this->calcul(); 
     }
