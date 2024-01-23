@@ -33,7 +33,7 @@ echo $etudiant->note() . "<br>";
 $class = "Etudiant";
 $method = "note" ; 
 
-$etudiant2 = new $class(); 
+$etudiant2 = new $class() ; 
 echo $etudiant2->{$method}() . "<br>";
 
 // call_user_func()
