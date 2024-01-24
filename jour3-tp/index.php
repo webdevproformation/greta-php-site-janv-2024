@@ -8,6 +8,7 @@ if(isset($_GET["page"]) && !empty($_GET["page"])){
     $page = "home"; 
 }
 
+require_once __DIR__ . "/Controllers/AbstractController.php";
 require_once __DIR__ . "/Controllers/PageController.php";
 require_once __DIR__ . "/Controllers/ErreurController.php";
 
