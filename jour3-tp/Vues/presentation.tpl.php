@@ -7,11 +7,9 @@
             <?php endforeach ?>
         </div>
         <div class="col">
-            <img src="https://source.unsplash.com/random/600x100?v1" alt="" class="w-100 rounded mb-3">
-            <img src="https://source.unsplash.com/random/600x100?v2" alt="" class="w-100 rounded mb-3">
-            <img src="https://source.unsplash.com/random/600x100?v3" alt="" class="w-100 rounded mb-3">
-            <img src="https://source.unsplash.com/random/600x100?v4" alt="" class="w-100 rounded mb-3">
+            <?php foreach($data["images"] as $key => $value) : ?>
+            <img src="<?= $value ?>" alt="" class="w-100 rounded mb-3">
+            <?php endforeach ?>
         </div>
     </section>
-
 </div>
