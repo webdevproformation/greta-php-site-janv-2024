@@ -8,26 +8,17 @@ if(isset($_GET["page"]) && !empty($_GET["page"])){
     $page = "home"; 
 }
 
+require_once __DIR__ . "/Controllers/PageController.php";
+
 if($page === "home"){
-    // afficher la page home // http://192.168.15.22/jour3-tp
-    // echo "afficher home"; 
-    require_once __DIR__ . "/Vues/header.tpl.php";
-    require_once __DIR__ . "/Vues/$page.tpl.php";
-    require_once __DIR__ . "/Vues/footer.tpl.php";
+    $p = new PageController();
+    $p->$page(); 
 }else if($page === "presentation"){
-    // afficher la page présentation
-    //echo "afficher présentation"; 
-    // http://192.168.15.22/jour3-tp/index.php?page=presentation
-    require_once __DIR__ . "/Vues/header.tpl.php";
-    require_once __DIR__ . "/Vues/$page.tpl.php";
-    require_once __DIR__ . "/Vues/footer.tpl.php";
+    $p = new PageController();
+    $p->$page(); 
 }else if($page === "contact"){
-    require_once __DIR__ . "/Vues/header.tpl.php";
-    require_once __DIR__ . "/Vues/$page.tpl.php";
-    require_once __DIR__ . "/Vues/footer.tpl.php";
-    // echo "afficher contact"; 
-    // http://192.168.15.22/jour3-tp/index.php?page=contact
-    // afficher la page de contact
+    $p = new PageController();
+    $p->$page(); 
 }
 
 // dans le dossier Vues
