@@ -11,12 +11,14 @@ class PageController {
         $data = [];
         $data["title"] = "Homepage";
         $data["h1"] = "Bienvenue sur notre site"; 
-        $data["diapositives"] = [
-            "https://source.unsplash.com/random/1500x300?v1",
-            "https://source.unsplash.com/random/1500x300?v2",
-            "https://source.unsplash.com/random/1500x300?v3",
-            "https://source.unsplash.com/random/1500x300?v4",
-        ];
+
+        $images = [];
+        for($i = 1 ; $i < 5 ; $i++){
+            $images[] = "https://source.unsplash.com/random/1500x300?v$i";
+        }
+
+        $data["diapositives"] = $images;
+
         $this->render("home" , $data );
     }
     public function presentation() :void{
@@ -31,12 +33,13 @@ class PageController {
             "Explicabo esse ex architecto necessitatibus voluptatibus. Vero corrupti porro, animi voluptate deserunt laboriosam itaque nobis? Odio rerum sequi facere non eaque, assumenda aliquam repellendus totam quia. Libero quaerat quibusdam nostrum temporibus. Natus, soluta? Aspernatur architecto nam saepe corrupti quod blanditiis?",
             "Hic iure veritatis aspernatur asperiores maiores dignissimos sed commodi nam nemo ullam blanditiis vel eligendi sunt cupiditate praesentium, alias excepturi maxime fuga iste doloribus nostrum facere obcaecati animi. Ea rerum soluta ducimus dolores voluptatibus fuga cum aspernatur. Voluptates, numquam molestiae?"
         ];
-        $data["images"] = [
-            "https://source.unsplash.com/random/600x100?v1",
-            "https://source.unsplash.com/random/600x100?v2",
-            "https://source.unsplash.com/random/600x100?v3",
-            "https://source.unsplash.com/random/600x100?v4",
-        ]; 
+        $images = [];
+
+        for($i = 1 ; $i < 5  ; $i++){
+            $images[] = "https://source.unsplash.com/random/600x150?v$i";
+        }
+
+        $data["images"] = $images; 
 
 
         $this->render("presentation" , $data);
