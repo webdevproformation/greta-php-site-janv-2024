@@ -9,17 +9,23 @@ if(isset($_GET["page"]) && !empty($_GET["page"])){
 }
 
 require_once __DIR__ . "/Controllers/PageController.php";
+require_once __DIR__ . "/Controllers/ErreurController.php";
 
-if($page === "home"){
+$routes = [
+    "home" => "home" , 
+    "presentation" => "presentation",
+    "contact" => "contact"
+];
+
+if(isset($routes[$page])){
     $p = new PageController();
     $p->$page(); 
-}else if($page === "presentation"){
-    $p = new PageController();
-    $p->$page(); 
-}else if($page === "contact"){
-    $p = new PageController();
-    $p->$page(); 
+}else{
+    $p = new ErreurController();
+    $p->erreur404(); 
 }
+
+
 
 // dans le dossier Vues
 // créer 5 fichiers 
