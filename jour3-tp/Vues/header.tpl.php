@@ -14,10 +14,10 @@
             </span>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="index.php" class="nav-link">Accueil</a>
+                    <a href="index.php" class="nav-link active">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a href="index.php?page=presentation" class="nav-link">Qui sommes nous ?</a>
+                <li class="nav-item ">
+                    <a href="index.php?page=presentation" class="nav-link  " >Qui sommes nous ?</a>
                 </li>
                 <li class="nav-item">
                     <a href="index.php?page=contact" class="nav-link">Nous contacter</a>
