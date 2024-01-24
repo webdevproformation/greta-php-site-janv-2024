@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Bienvenue sur mon site </h1>
+    <h1><?= $data["h1"] ?></h1>
 
     <section class="carousel slide" id="diapo" data-bs-ride="carousel">
         <div class="carousel-inner">

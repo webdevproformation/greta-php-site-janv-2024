@@ -7,7 +7,17 @@ class PageController {
     // $p = new PageController()
     // $p->home(); 
     public function home() :void {
-        $this->render("home");
+
+        $data = [];
+        $data["title"] = "Homepage";
+        $data["h1"] = "Bienvenue sur notre site"; 
+        $data["diapositives"] = [
+            "https://source.unsplash.com/random/1500x300?v1",
+            "https://source.unsplash.com/random/1500x300?v2",
+            "https://source.unsplash.com/random/1500x300?v3",
+            "https://source.unsplash.com/random/1500x300?v4",
+        ];
+        $this->render("home" , $data );
     }
     public function presentation() :void{
         $this->render("presentation");
