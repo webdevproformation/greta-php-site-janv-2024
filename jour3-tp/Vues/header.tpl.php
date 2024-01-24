@@ -14,13 +14,13 @@
             </span>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="index.php" class="nav-link active">Accueil</a>
+                    <a href="/jour3-tp/" class="nav-link active">Accueil</a>
                 </li>
                 <li class="nav-item ">
-                    <a href="index.php?page=presentation" class="nav-link  " >Qui sommes nous ?</a>
+                    <a href="/jour3-tp/presentation" class="nav-link  " >Qui sommes nous ?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?page=contact" class="nav-link">Nous contacter</a>
+                    <a href="/jour3-tp/contact" class="nav-link">Nous contacter</a>
                 </li>
             </ul>
         </nav>
