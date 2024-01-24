@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1>Vous avez une question ? Nous avons une réponse !!</h1>
+    <h1><?= $data["h1"] ?></h1>
 
     <section class="row">
         <div class="col-8">
