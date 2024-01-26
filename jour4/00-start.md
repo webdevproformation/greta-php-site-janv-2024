@@ -20,7 +20,7 @@ Gestion de projet en informatique
 => chef  =>  scrum master  => organise une réunion 
                            => SCRUM 
                            => fluidifier l'exécution 
-                            => sprint (exécuter les 10 tâches du durant la semaine )
+                            => sprint (exécuter les 10 tâches durant la semaine )
 => développeur => vous 
 
 => demander de réaliser un petit site internet en 1/2 journée / voire une journée
@@ -31,7 +31,3 @@ Gestion de projet en informatique
 => utiliser PHP et l'organisation MVC + FC (index.php)
 
 => nom du projet : MVC TP 
-
-
-
-=> 
