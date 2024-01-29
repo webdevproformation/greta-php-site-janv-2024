@@ -23,4 +23,8 @@ tous les matins => il va voir où on en est
 => site internet Trello https://trello.com/fr
 => l'ajouter dans les rendus pour le jury 
 
-=> l'important dans la méthodologie de gestion de projet agile => privilégier les processus et non les documents 
+=> l'important dans la méthodologie de gestion de projet agile => privilégier les processus et non les documents
+
+- gestion des page d'erreur 404 
+- gestion des urls propres .htaccess
+- sortir les données écrites dans les vues pour les mettre dans controllers 

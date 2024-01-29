@@ -13,8 +13,23 @@ if(isset($_GET["page"]) && !empty($_GET["page"])){
 // maintenant on sait quelle page est demandée par le client
 // appeler un controller et ce controller va avoir une méthode qui a le nom de la page a afficher
 
-require_once __DIR__ . "/Controllers/SiteController.php";
+$routes = [
+    "home" => "home",
+    "services" => "services",
+    "connexion" => "connexion"
+];
 
-$p = new SiteController();
-$p->$page(); 
+require_once __DIR__ . "/Controllers/AbstractController.php";
+require_once __DIR__ . "/Controllers/SiteController.php";
+require_once __DIR__ . "/Controllers/ErreurController.php";
+
+if(array_key_exists( $page , $routes)){
+    $p = new SiteController();
+    $p->$page();
+} else {
+    $e = new ErreurController();
+    $e->erreur404();
+}
+
+ 
 
