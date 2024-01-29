@@ -1,3 +1,5 @@
+# sommaire 
+
 - rappel de Git et github
 - introduire M de MVC => ajouter les bases de données
 - namespace 
