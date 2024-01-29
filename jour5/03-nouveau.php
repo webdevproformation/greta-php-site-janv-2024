@@ -4,6 +4,7 @@ require_once __DIR__ . "/Bdd.php";
 require_once __DIR__ . "/Categorie.php";
 
 $categorieModel = new Categorie(); // Active Record
+
 $nbLigne = $categorieModel
                 ->setNom("première catégorie")
                 ->setDescription("un lorem ipsum")
