@@ -1,0 +1,6 @@
+{
+    "require": {
+        "psr/log": "^3.0",
+        "symfony/monolog-bundle": "^3.10"
+    }
+}
