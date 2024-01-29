@@ -3,18 +3,21 @@
 class SiteController extends AbstractController{
 
     public function connexion() :void {
-        $this->render("connexion");
+        require_once __DIR__ . "/../Utils/data.php";
+        $data = $baseDeDonnees["connexion"];
+        $this->render("connexion" , $data);
     }
 
     public function home() :void {
-        $this->render("home");
-
+        require_once __DIR__ . "/../Utils/data.php";
+        $data = $baseDeDonnees["accueil"];
+        $this->render("home" , $data);
     }
 
     public function services() :void {
-        $this->render("services");
+        require_once __DIR__ . "/../Utils/data.php";
+        $data = $baseDeDonnees["services"];
+        $this->render("services" , $data);
     }
-
-    
 
 }
