@@ -14,7 +14,7 @@
             </span>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link" >Accueil</a>
+                    <a href="index.php" class="nav-link" >Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link" >Service</a>
