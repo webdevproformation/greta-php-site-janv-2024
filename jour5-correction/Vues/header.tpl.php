@@ -14,13 +14,13 @@
             </span>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="/jour5-correction/" class="nav-link" >Accueil</a>
+                    <a href="/jour5-correction/" class="nav-link <?= $nomTemplate === "home" ? 'active' : '' ?>" >Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jour5-correction/services" class="nav-link" >Service</a>
+                    <a href="/jour5-correction/services" class="nav-link  <?= $nomTemplate === "services" ? 'active' : '' ?>" >Service</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/jour5-correction/connexion" class="nav-link" >Connexion</a>
+                    <a href="/jour5-correction/connexion" class="nav-link  <?= $nomTemplate === "connexion" ? 'active' : '' ?>" >Connexion</a>
                 </li>
             </ul>
         </nav>
