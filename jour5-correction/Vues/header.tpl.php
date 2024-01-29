@@ -20,7 +20,7 @@
                     <a href="index.php?page=services" class="nav-link" >Service</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" >Connexion</a>
+                    <a href="index.php?page=connexion" class="nav-link" >Connexion</a>
                 </li>
             </ul>
         </nav>

@@ -2,6 +2,10 @@
 
 class SiteController{
 
+    public function connexion(){
+        $this->render("connexion");
+    }
+
     public function home(){
         $this->render("home");
 
