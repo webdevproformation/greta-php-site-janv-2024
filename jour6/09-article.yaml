@@ -1,0 +1,22 @@
+auteurs: les auteurs fr
+
+livres:
+    date: 1er janvier 2023
+    auteur: Victor Hugo
+    nom: Les Misérables
+    theme: 
+        - paris
+        - Causette
+        - Misère
+
+#$livres = [
+#  "date" => "1er janvier 2023",
+#  "auteur" => "Victor Hugo",
+#  "nom" => "Les Misérables"
+#  "theme" => ["paris", "Causette", "Misère"]
+#]
+# transformer notre fichier .yaml en tableau PHP
+# télécharger une librairie PHP 
+# packagist.org
+# composer require symfony/yaml
+# https://symfony.com/doc/current/components/yaml.html
