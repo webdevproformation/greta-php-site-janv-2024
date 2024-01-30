@@ -1,2 +1,6 @@
-# commentaire 
+# veut pas versionner et partager
+# contient info sensible
 param.ini
+# veut pas versionner et partager
+# laisser à composer le fait gérer le contenu de ce dossier 
+vendor
