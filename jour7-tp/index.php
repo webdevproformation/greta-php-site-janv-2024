@@ -1,5 +1,7 @@
 <?php 
 require_once __DIR__ . "/vendor/autoload.php"; 
+require_once __DIR__ . "/src/Utils/Bdd.php";
+require_once __DIR__ . "/src/Model/Article.php";
 require_once __DIR__ . "/src/Controller/SiteController.php";
 
 $router = new AltoRouter(); 

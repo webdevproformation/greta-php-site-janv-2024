@@ -1,10 +1,20 @@
 <?php 
 
-namespace App\Controller ; 
+namespace App\Controller ;
+
+use App\Model\Article;
 
 class SiteController{
 
     public function home() :void {
+        $data = [];
+        $articleModel =  new Article();
+        $data["articles"] = $articleModel->readAll();
+        $data["h1"] = "Nos derniers articles à lire";
+        $data["title"] = "page d'accueil";
+
+        var_dump($data); 
+
         $this->render("home");
     }
 
