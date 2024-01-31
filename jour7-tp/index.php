@@ -1,13 +1,29 @@
 <?php 
-
 require_once __DIR__ . "/vendor/autoload.php"; 
-
 $router = new AltoRouter(); 
+// permet de définir le dossier qui contient notre projet
+// $_SERVER['BASE_URI'] => "/jour7-tp"
+$router->setBasePath($_SERVER['BASE_URI']);
 
 $router->map("GET", "/", [
     "class" => "\App\SiteController",
     "method" => "home"
 ] , "home");
+
+$router->map("GET", "/login", [
+    "class" => "\App\SiteController",
+    "method" => "login"
+] , "login");
+
+$router->map("GET", "/article/[i:id]", [
+    "class" => "\App\SiteController",
+    "method" => "article"
+] , "article");
+
+$match = $router->match(); 
+var_dump($match); 
+// http://192.168.15.22/jour7-tp
+
 
 // $router objet 
 // qui contient une méthode map()
