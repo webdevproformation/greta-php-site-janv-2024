@@ -38,6 +38,9 @@ sujet site internet => blog => news
     => https://packagist.org/packages/altorouter/altorouter
     => https://dannyvankooten.github.io/AltoRouter/
     
+    cd /var/www/html/jour7-tp
+    composer require altorouter/altorouter
+    
     => veuillez vous connecter à votre machine virtuelle 
     => positionner dans le dossier jour7-tp
     => installer la librairie AltoRouter
