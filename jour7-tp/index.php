@@ -8,17 +8,17 @@ $router = new AltoRouter();
 $router->setBasePath($_SERVER['BASE_URI']); // gérer proprement
                                             // les urls dans les vues
 $router->map("GET", "/", [
-    "class" => "\App\SiteController",
+    "class" => "\App\Controller\SiteController",
     "method" => "home"
 ] , "home");
 
 $router->map("GET", "/login", [
-    "class" => "\App\SiteController",
+    "class" => "\App\Controller\SiteController",
     "method" => "login"
 ] , "login");
 
 $router->map("GET", "/article/[i:id]", [
-    "class" => "\App\SiteController",
+    "class" => "\App\Controller\SiteController",
     "method" => "article"
 ] , "article");
 
