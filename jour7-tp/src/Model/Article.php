@@ -6,11 +6,11 @@ use PDO ;
 use App\Utils\Bdd ; 
 
 class Article{
-    private $id ;
-    private $titre ;
-    private $contenu ;
-    private $img;
-    private $dt_creation ; 
+    private int|null $id ;
+    private string $titre ;
+    private string|null $contenu ;
+    private string|null $img;
+    private string|null  $dt_creation ; 
 
     /**
      * Get the value of id
