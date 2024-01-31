@@ -3,8 +3,8 @@ require_once __DIR__ . "/vendor/autoload.php";
 $router = new AltoRouter(); 
 // permet de définir le dossier qui contient notre projet
 // $_SERVER['BASE_URI'] => "/jour7-tp"
-$router->setBasePath($_SERVER['BASE_URI']);
-
+$router->setBasePath($_SERVER['BASE_URI']); // gérer proprement
+                                            // les urls dans les vues
 $router->map("GET", "/", [
     "class" => "\App\SiteController",
     "method" => "home"

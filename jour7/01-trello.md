@@ -25,7 +25,7 @@ sujet site internet => blog => news
         - param.ini
     - vendor
 
-- [] router 
+- [xx] router 
     - if ??? $_GET["page"] existe 
     - tableau liste des pages
     - est ceque la page est dans le tableau
