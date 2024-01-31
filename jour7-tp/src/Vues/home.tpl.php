@@ -9,6 +9,9 @@
                 <div class="card-body">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quidem distinctio rerum vel consectetur ipsum quos provident dicta similique repellendus.</p>
                 </div>
+                <div class="card-footer text-end">
+                    <a href="<?= $router->generate("article" , ["id" => 1]) ?>" class="btn btn-primary">lire la suite</a>
+                </div>
             </article>
         </div>
         <div class="col-4">
