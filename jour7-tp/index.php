@@ -24,7 +24,7 @@ $router->map("GET", "/article/[i:id]", [
 
 $match = $router->match(); 
 
-var_dump($match);
+//var_dump($match);
 
 if($match){
     $class = $match["target"]["class"];
