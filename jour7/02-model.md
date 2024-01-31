@@ -1,0 +1,5 @@
+- créer dans le dossier Model une class Article qui va être liée à la table article 
+- autant de propriété que la table a de colonnes
+- setter et les getter
+- créer la méthode readAll()
+- créer la méthode create()
