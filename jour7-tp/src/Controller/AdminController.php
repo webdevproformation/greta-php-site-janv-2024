@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controller;
-use App\Model\Article;
+use App\Model\Article ;
+use App\Model\User ; 
 
 class AdminController  extends AbstractController{
     public function article_new(){
@@ -61,14 +62,21 @@ class AdminController  extends AbstractController{
             if(!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/", $password)){
                 $erreur[] = "le password doit contenir 8 lettres avec au moins une majuscule et une minuscule et un chiffre ";
             }
-
-            // var_dump(!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/", $password));
-
-            // est ce que il n'y a pas déjà un projet user avec le mail saisi 
-
+             // est ce que il n'y a pas déjà un projet user avec le mail saisi 
+            $userModel = new User(); 
+            if($userModel->isUnique($email) !== 0){
+                $erreur[] = "le mail saisit est déjà utilisé, veuillez choisir une autre email"; 
+            }
+            $userModel->setEmail($email)
+                ->setPassword($password)
+                ->setRole("redacteur");
             // si il n'y a pas d'erreur 
-
-            // create 
+            if(empty($erreur)){
+                // create 
+                $userModel->create();
+                global $router ;
+                header("Location:" . $router->generate("home"));
+            }
         }
         $data = [];
         $data["h1"] = "créer un nouveau profil gestionnaire"; 

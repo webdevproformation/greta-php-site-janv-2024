@@ -159,4 +159,13 @@ class User{
         return $stmt->rowCount(); 
     }
 
+    public function isUnique( string $email ):int {
+        $connexion = Bdd::getInstance();
+        $sql = "SELECT * FROM user WHERE email = :email";
+        $stmt = $connexion->prepare($sql);
+        $stmt->execute([
+            ":email" => $email 
+        ]);
+        return $stmt->rowCount(); 
+    }
 }
