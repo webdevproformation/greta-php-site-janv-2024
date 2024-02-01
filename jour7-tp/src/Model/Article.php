@@ -65,6 +65,9 @@ class Article{
      */ 
     public function getImg()
     {
+        if($this->img === null){
+            return "https://via.placeholder.com/400x200?text=no image";
+        }
         return $this->img;
     }
 

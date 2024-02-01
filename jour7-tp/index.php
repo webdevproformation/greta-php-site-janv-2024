@@ -24,6 +24,11 @@ $router->map("GET", "/article/[i:id]", [
     "method" => "article"
 ] , "article");
 
+$router->map("GET", "/admin/article/new", [
+    "class" => "\App\Controller\AdminController",
+    "method" => "article_new"
+] , "admin_article");
+
 $match = $router->match(); 
 
 //var_dump($match);
