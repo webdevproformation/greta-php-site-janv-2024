@@ -8,8 +8,8 @@ class AdminController  extends AbstractController{
         $articleModel = new Article();
         if(!empty($_POST)){
             // fonction sanitize => enlever les caractères injections 
-            $titre = htmlspecialchars($_POST["titre"]);
-            $contenu = htmlspecialchars($_POST["contenu"]);
+            $titre = htmlspecialchars(trim($_POST["titre"]));
+            $contenu = htmlspecialchars(trim($_POST["contenu"]));
             $img = filter_input(INPUT_POST , "img", FILTER_SANITIZE_URL ); 
 
             if(strlen($titre ) < 3 || strlen($titre) > 255){
@@ -20,7 +20,6 @@ class AdminController  extends AbstractController{
                 $erreur[] = "le contenu doit contenir entre 3 et 65000 lettres";
             }   
 
-            // var_dump( $img !== "" || !filter_var($img, FILTER_VALIDATE_URL) );
 
             if($img !== "" && !filter_var($img, FILTER_VALIDATE_URL)){
                     $erreur[] = "url de l'image n'est pas valide";

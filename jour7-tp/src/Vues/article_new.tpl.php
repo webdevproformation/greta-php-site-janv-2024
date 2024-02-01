@@ -9,11 +9,11 @@
     <?php endif ?>
     <form method="post">
         <div class="mb-3">
-            <label for="titre">titre</label>
+            <label for="titre">titre *</label>
             <input type="text" name="titre" class="form-control" id="titre" value="<?= $data["article"]->getTitre() ?>">
         </div>
         <div class="mb-3">
-            <label for="contenu">contenu</label>
+            <label for="contenu">contenu *</label>
             <textarea name="contenu" id="contenu" cols="30" rows="10" class="form-control"><?= $data["article"]->getContenu() ?></textarea>
         </div><!-- http://192.168.15.22/jour7-tp/admin/article/new -->
         <div class="mb-3">
