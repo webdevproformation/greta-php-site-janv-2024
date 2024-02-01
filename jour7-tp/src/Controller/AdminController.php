@@ -80,6 +80,7 @@ class AdminController  extends AbstractController{
         }
         $data = [];
         $data["h1"] = "créer un nouveau profil gestionnaire"; 
+        $data["erreur"] = $erreur ; 
         $this->render("user_new" , $data); 
     }
 } 
