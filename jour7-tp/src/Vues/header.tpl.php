@@ -20,5 +20,10 @@
                     <a href="<?= $router->generate("login")  ?>" class="nav-link">Connexion</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="<?= $router->generate("admin_article_new")  ?>" class="nav-link">Ajouter article</a>
+                </li>
+            </ul>
         </nav>
     </header>

@@ -6,7 +6,7 @@
         <div class="col-4">
             <article class="card mb-3">
                 <h2 class="card-header h4"><?= $value->getTitre() ?></h2>
-                <img src="<?= $value->getImg() ?>" alt="">
+                <img src="<?= $value->getUrlImg() ?>" alt="">
                 <div class="card-body">
                     <p><?= $value->getContenu() ?></p>
                 </div>

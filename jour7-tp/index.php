@@ -26,10 +26,10 @@ $router->map("GET", "/article/[i:id]", [
     "method" => "article"
 ] , "article");
 
-$router->map("GET", "/admin/article/new", [
+$router->map("GET|POST", "/admin/article/new", [
     "class" => "\App\Controller\AdminController",
     "method" => "article_new"
-] , "admin_article");
+] , "admin_article_new");
 
 $match = $router->match(); 
 

@@ -6,11 +6,11 @@ use PDO ;
 use App\Utils\Bdd ; 
 
 class Article{
-    private int|null $id ;
-    private string $titre ;
-    private string|null $contenu ;
-    private string|null $img;
-    private string|null  $dt_creation ; 
+    private int|null $id = null;
+    private string $titre = "";
+    private string|null $contenu = null;
+    private string|null $img = null;
+    private string|null  $dt_creation = null; 
 
     /**
      * Get the value of id
@@ -23,7 +23,7 @@ class Article{
     /**
      * Get the value of titre
      */ 
-    public function getTitre()
+    public function getTitre(): string
     {
         return $this->titre;
     }
@@ -33,7 +33,7 @@ class Article{
      *
      * @return  self
      */ 
-    public function setTitre($titre)
+    public function setTitre(string $titre)
     {
         $this->titre = $titre;
 
@@ -60,14 +60,18 @@ class Article{
         return $this;
     }
 
+    public function getUrlImg(){
+        if($this->img === null){
+            return "https://via.placeholder.com/400x200?text=no image";
+        }
+        return $this->img;
+    }
+
     /**
      * Get the value of img
      */ 
     public function getImg()
     {
-        if($this->img === null){
-            return "https://via.placeholder.com/400x200?text=no image";
-        }
         return $this->img;
     }
 
