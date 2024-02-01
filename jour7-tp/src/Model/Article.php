@@ -129,4 +129,16 @@ class Article{
         ]);
         return $stmt->rowCount(); 
     }
+
+    public function lireLaSuite(int $nbMot = 10) :string{
+       $contenus = explode(" ", $this->contenu ) ;
+       if(count($contenus) < $nbMot ){
+            return $this->contenu ; 
+       }
+       $resultat = "";
+       for($i = 0 ; $i < $nbMot ; $i++){
+        $resultat .= " " . $contenus[$i];
+       }
+       return $resultat . " ..."; 
+    }
 }

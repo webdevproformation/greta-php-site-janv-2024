@@ -1,0 +1,4 @@
+# pour éviter quelqu'un saisisse l'adresse suivante
+# http://192.168.15.22/jour7-tp/src/param.ini
+# http://http://192.168.15.22/jour7-tp/src/Controller/SiteController.php
+Deny from all
