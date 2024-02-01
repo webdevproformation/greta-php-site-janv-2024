@@ -67,8 +67,11 @@ class AdminController  extends AbstractController{
             if($userModel->isUnique($email) !== 0){
                 $erreur[] = "le mail saisit est déjà utilisé, veuillez choisir une autre email"; 
             }
+            
+            $passwordHashed = password_hash($password ,  PASSWORD_BCRYPT );
+
             $userModel->setEmail($email)
-                ->setPassword($password)
+                ->setPassword($passwordHashed)
                 ->setRole("redacteur");
             // si il n'y a pas d'erreur 
             if(empty($erreur)){

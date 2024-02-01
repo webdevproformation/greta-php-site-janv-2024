@@ -6,6 +6,7 @@ require_once __DIR__ . "/src/Model/Article.php";
 require_once __DIR__ . "/src/Controller/AbstractController.php";
 require_once __DIR__ . "/src/Controller/AdminController.php";
 require_once __DIR__ . "/src/Controller/SiteController.php";
+require_once __DIR__ . "/src/Controller/ErreurController.php";
 
 $router = new AltoRouter(); 
 // permet de définir le dossier qui contient notre projet
@@ -47,6 +48,9 @@ if($match){
     $p = new $class();
     $p->$method(); 
     // créer le controller et la méthode qui va bien 
+}else {
+    $p = new App\Controller\ErreurController();
+    $p->erreur404(); 
 }
  
 // http://192.168.15.22/jour7-tp
