@@ -43,4 +43,10 @@ class AdminController  extends AbstractController{
         $data["article"] = $articleModel ; 
         $this->render("article_new", $data); 
     }
+
+    public function user_new(){
+        $data = [];
+        $data["h1"] = "créer un nouveau profil gestionnaire"; 
+        $this->render("user_new" , $data); 
+    }
 } 

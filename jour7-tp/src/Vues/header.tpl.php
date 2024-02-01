@@ -24,6 +24,9 @@
                 <li class="nav-item">
                     <a href="<?= $router->generate("admin_article_new")  ?>" class="nav-link">Ajouter article</a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= $router->generate("admin_user_new")  ?>" class="nav-link">Ajouter gestionnaire</a>
+                </li>
             </ul>
         </nav>
     </header>

@@ -31,6 +31,11 @@ $router->map("GET|POST", "/admin/article/new", [
     "method" => "article_new"
 ] , "admin_article_new");
 
+$router->map("GET", "/admin/user/new", [
+    "class" => "\App\Controller\AdminController",
+    "method" => "user_new"
+] , "admin_user_new");
+
 $match = $router->match(); 
 
 //var_dump($match);

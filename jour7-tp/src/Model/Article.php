@@ -6,7 +6,7 @@ use PDO ;
 use App\Utils\Bdd ; 
 
 class Article{
-    private int|null $id = null;
+    private int|null $id = null  ;
     private string $titre = "";
     private string|null $contenu = null;
     private string|null $img = null;

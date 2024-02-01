@@ -10,7 +10,7 @@
     <form method="post">
         <div class="mb-3">
             <label for="titre">titre *</label>
-            <input type="text" name="titre" class="form-control" id="titre" value="<?= $data["article"]->getTitre() ?>">
+            <input type="text" name="titre" class="form-control" id="titre" value="<?= $data["article"]->getId() ?>">
         </div>
         <div class="mb-3">
             <label for="contenu">contenu *</label>
