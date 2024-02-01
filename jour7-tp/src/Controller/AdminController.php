@@ -45,6 +45,31 @@ class AdminController  extends AbstractController{
     }
 
     public function user_new(){
+        $erreur = [];
+        if(!empty($_POST)){
+            $email = htmlspecialchars(trim($_POST["email"]));
+            $password = htmlspecialchars(trim($_POST["password"]));
+
+            // série de tests 
+            // email valide
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $erreur[] = "email invalide"; 
+            }
+
+            // password contient 8 lettres avec majuscule et minuscule et un chiffre 
+            // regex (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}
+            if(!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/", $password)){
+                $erreur[] = "le password doit contenir 8 lettres avec au moins une majuscule et une minuscule et un chiffre ";
+            }
+
+            // var_dump(!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/", $password));
+
+            // est ce que il n'y a pas déjà un projet user avec le mail saisi 
+
+            // si il n'y a pas d'erreur 
+
+            // create 
+        }
         $data = [];
         $data["h1"] = "créer un nouveau profil gestionnaire"; 
         $this->render("user_new" , $data); 

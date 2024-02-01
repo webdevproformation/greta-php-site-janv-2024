@@ -31,7 +31,7 @@ $router->map("GET|POST", "/admin/article/new", [
     "method" => "article_new"
 ] , "admin_article_new");
 
-$router->map("GET", "/admin/user/new", [
+$router->map("GET|POST", "/admin/user/new", [
     "class" => "\App\Controller\AdminController",
     "method" => "user_new"
 ] , "admin_user_new");
