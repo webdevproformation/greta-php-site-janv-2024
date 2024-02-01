@@ -31,3 +31,15 @@ III récupérer les informations saisies et les insérer en base de données
     réafficher le formulaire 
         zone rouge 
         remettre les valeurs saisies précédemment
+
+cas pratique : 
+=> ajouter une nouvelle page qui sera accessible via l'adresse
+/admin/user/new 
+cette page doit ête gérée dans le Controller AdminController dans la méthode 
+user_new 
+
+// cette page contient un formulaire avec deux champs 
+    
+    email
+    password
+    
