@@ -7,7 +7,7 @@
             <article class="card mb-3">
                 <h2 class="card-header h6"><?= $value->getTitre() ?></h2>
                 <img src="<?= $value->getUrlImg() ?>" alt="" style="height:150px;object-fit:cover">
-                <div class="card-body">
+                <div class="card-body" style="height:100px">
                     <p><?= $value->lireLaSuite() ?></p>
                 </div>
                 <div class="card-footer text-end">
