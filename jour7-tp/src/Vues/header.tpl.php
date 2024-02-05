@@ -39,7 +39,7 @@
                 </li>
                 <?php endif ?>
             </ul>
-            <?php if(isset($_SESSION["user"])) : ?>
+            <?php // if(isset($_SESSION["user"])) : ?>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a href="<?= $router->generate("admin_article_new")  ?>" class="nav-link">Ajouter article</a>
@@ -51,6 +51,6 @@
                     <a href="<?= $router->generate("logout")  ?>" class="nav-link">Déconnexion</a>
                 </li>
             </ul>
-            <?php endif ?>
+            <?php //  endif ?>
         </nav>
     </header>
