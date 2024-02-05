@@ -12,7 +12,7 @@ class SiteController extends AbstractController{
         $data["title"] = "page d'accueil";
         $this->render("home" , $data);
     }
-
+    
     public function login() :void{
         $erreurs = [];
         if(!empty($_POST)){
