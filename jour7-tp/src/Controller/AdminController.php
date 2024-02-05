@@ -7,11 +7,11 @@ class AdminController  extends AbstractController{
 
     public function __construct()
     {
-        /* if(!isset($_SESSION["user"])){
+        if(!isset($_SESSION["user"])){
             $data["h1"] = "Page d'erreur 403, vous devez vous connecter pour pouvoir accéder à cette page !";
             $this->render("403", $data); 
             die(); 
-        } */
+        }
     }
 
     public function article_new(){
