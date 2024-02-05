@@ -1,4 +1,7 @@
 <?php 
+session_start(); // créer la session dès le début de mon code 
+                 // car lors de la connexion on a besoin de $_SESSION
+
 require_once __DIR__ . "/vendor/autoload.php"; 
 require_once __DIR__ . "/src/Utils/Bdd.php";
 require_once __DIR__ . "/src/Model/User.php";
@@ -18,7 +21,7 @@ $router->map("GET", "/", [
     "method" => "home"
 ] , "home");
 
-$router->map("GET", "/login", [
+$router->map("GET|POST", "/login", [
     "class" => "\App\Controller\SiteController",
     "method" => "login"
 ] , "login");
@@ -37,6 +40,11 @@ $router->map("GET|POST", "/admin/user/new", [
     "class" => "\App\Controller\AdminController",
     "method" => "user_new"
 ] , "admin_user_new");
+
+$router->map("GET", "/logout", [
+    "class" => "\App\Controller\SiteController",
+    "method" => "logout"
+] , "logout");
 
 $match = $router->match(); 
 

@@ -1,5 +1,12 @@
 <div class="container">
     <h1><?= $data["h1"] ?></h1>
+    <?php if(!empty($data["erreur"])) :?>
+        <div class="alert alert-danger">
+            <?php foreach($data["erreur"] as $key => $value) : ?>
+                <div><?=  $value  ?></div>
+            <?php endforeach ?>
+        </div>
+    <?php endif ?>
     <form method="post">
         <div class="mb-3">
             <label for="email">votre email</label>

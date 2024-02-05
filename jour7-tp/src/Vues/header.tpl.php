@@ -33,10 +33,13 @@
                 <li class="nav-item">
                     <a href="<?= $router->generate("home")  ?>" class="nav-link">Accueil</a>
                 </li>
+                <?php if(!isset($_SESSION["user"])) : ?>
                 <li class="nav-item">
                     <a href="<?= $router->generate("login")  ?>" class="nav-link">Connexion</a>
                 </li>
+                <?php endif ?>
             </ul>
+            <?php if(isset($_SESSION["user"])) : ?>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a href="<?= $router->generate("admin_article_new")  ?>" class="nav-link">Ajouter article</a>
@@ -44,6 +47,10 @@
                 <li class="nav-item">
                     <a href="<?= $router->generate("admin_user_new")  ?>" class="nav-link">Ajouter gestionnaire</a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= $router->generate("logout")  ?>" class="nav-link">Déconnexion</a>
+                </li>
             </ul>
+            <?php endif ?>
         </nav>
     </header>
