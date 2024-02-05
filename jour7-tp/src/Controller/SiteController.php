@@ -61,4 +61,11 @@ class SiteController extends AbstractController{
         $data["h1"] = "Accéder au back office du site";
         $this->render("login" , $data);
     }
+
+    public function logout()  :void{
+        $_SESSION = [];
+        session_destroy();
+        global $router ;
+        header("Location:" . $router->generate("login"));
+    }
 }
