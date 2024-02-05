@@ -10,4 +10,10 @@ class SiteController extends AbstractController{
         $data["title"] = "page d'accueil";
         $this->render("home" , $data);
     }
+
+    public function login() :void{
+        $data = [];
+        $data["h1"] = "Accéder au back office du site";
+        $this->render("login" , $data);
+    }
 }
