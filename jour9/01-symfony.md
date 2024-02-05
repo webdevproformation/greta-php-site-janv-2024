@@ -31,7 +31,7 @@ cd /var/www/html
 # install une version minimal de symfony 
 composer create-project symfony/skeleton jour9-tp
 
-# modifier les droit du dossier var
+# modifier les droits du dossier var
 chmod 777 -R /var/www/html/jour9-tp/var
 
 # positionne dans le dossier du projet 
