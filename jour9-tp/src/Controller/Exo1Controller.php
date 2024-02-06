@@ -12,6 +12,7 @@ class Exo1Controller extends AbstractController{
     #[Route(path : "/exo2" , name:"exo2")]
     public function exo2(){
         $data = [
+            "h1" => "exo2" , 
             "prenom" => "Alain",
             "nom" => "Doe",
             "age" => 22
