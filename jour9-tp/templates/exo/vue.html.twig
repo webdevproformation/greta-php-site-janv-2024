@@ -1,3 +1,7 @@
-<h1>{{ h1 }}</h1>
-<p>{{ prenom }} {{ nom }} a {{ age }} ans</p>
-{# http://192.168.15.22/jour9-tp/exo2  #}
+{% extends "bootstrap.html.twig" %}
+
+{% block body %}
+    <h1>{{ h1 }}</h1>
+    <p>{{ prenom }} {{ nom }} a {{ age }} ans</p>
+    {# http://192.168.15.22/jour9-tp/exo2  #}
+{% endblock %}
