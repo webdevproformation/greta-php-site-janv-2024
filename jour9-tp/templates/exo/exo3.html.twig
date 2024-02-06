@@ -1,0 +1,17 @@
+{% extends "bootstrap.html.twig" %}
+{% block body %}
+    <h2>Afficher tous les étudiants</h2>
+    <ul>
+    {% for key , value in etudiants %}
+        <li>{{ value }}</li>
+    {% endfor %}
+    </ul>
+    <h2>Afficher toutes les matières qui ont moins de 4 lettres</h2>
+    <ul>
+    {% for key , value in formations %}
+        {% if value|length < 4 %}
+            <li>{{ value }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -19,4 +19,13 @@ class Exo1Controller extends AbstractController{
         ];
         return $this->render("exo/vue.html.twig" , $data); 
     }
+
+    #[Route(path : "/exo3" , name:"exo3")]
+    public function exo3(){
+        $data = [
+            "etudiants" => ["Alain", "Pierre", "Céline"],
+            "formations" => ["JS", "PHP" , "Angular", "Symfony"]
+        ];
+        return $this->render("exo/exo3.html.twig" , $data); 
+    }
 }
