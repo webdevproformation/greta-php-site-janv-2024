@@ -1,7 +1,7 @@
 {% extends "bootstrap.html.twig" %}
 
 {% block body %}
-
+    <h1>Liste des articles dans la table article </h1>
     {% for key , value in articles %}
         <h2>{{ value.titre }}</h2>
         <p>{{ value.contenu }}</p>
