@@ -22,3 +22,21 @@ FC + VueController
     créer un sous dossier "fragment"
         _menu.html.twig
         le _ signifie element qui est une partie d'une page 
+
+
+cas pratique 
+
+créer une nouvelle route exo3 dans le controller exo1Controller
+ce controller contient une méthode exo3
+cette méthode contient un tableau avec les valeurs suivantes 
+
+$data = [
+    "etudiants" => ["Alain", "Pierre", "Céline"],
+    "formations" => ["JS", "PHP" , "Angular", "Symfony"]
+];
+cette variable est envoyée à la vue 
+la vue qui est disponible dans le dossier templates/exo/exo3.html.twig 
+
+afficher tous les étudiants dans la vue 
+afficher toutes les formations dont le nombre de lettre est inférieur à 4 
+
