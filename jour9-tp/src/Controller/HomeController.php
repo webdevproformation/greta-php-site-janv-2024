@@ -27,4 +27,18 @@ class HomeController extends AbstractController {
         // dans ce dossier créer un fichier 
         // dont l'extension est .html.twig
     }
+
+    #[Route(path : "/boucle-condition" , name : "boucle-condition")]
+    public function boucleCondition(){
+        $data = [
+            "fleurs" => [
+                [ "nom" => "rose" , "prix" => 20 , "isEnStock" => true  ],
+                [ "nom" => "jasmin" , "prix" => 10 , "isEnStock" => true  ],
+                [ "nom" => "lilas" , "prix" => 15 , "isEnStock" => false  ],
+                [ "nom" => "tulipes" , "prix" => 30 , "isEnStock" => false  ],
+            ]
+        ];
+        return $this->render("front/boucle-condition.html.twig", $data); 
+    }
+
 }
