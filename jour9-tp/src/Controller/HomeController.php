@@ -2,6 +2,7 @@
 
 namespace App\Controller ;
 
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -39,6 +40,12 @@ class HomeController extends AbstractController {
             ]
         ];
         return $this->render("front/boucle-condition.html.twig", $data); 
+    }
+
+    #[Route(path : "/articles" , name:"articles")]
+    public function articles( ArticleRepository $articlesRepository ){
+        $data["articles"] = $articlesRepository->findAll();  
+        return $this->render("front/articles.html.twig" , $data); 
     }
 
 }

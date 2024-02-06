@@ -1,0 +1,10 @@
+{% extends "bootstrap.html.twig" %}
+
+{% block body %}
+
+    {% for key , value in articles %}
+        <h2>{{ value.titre }}</h2>
+        <p>{{ value.contenu }}</p>
+    {% endfor %}
+
+{% endblock %}
