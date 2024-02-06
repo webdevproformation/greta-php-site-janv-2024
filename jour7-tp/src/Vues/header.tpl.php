@@ -39,8 +39,17 @@
                 </li>
                 <?php endif ?>
             </ul>
-            <?php // if(isset($_SESSION["user"])) : ?>
+            <?php if(isset($_SESSION["user"])) : ?>
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">
+                        gestion
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?= $router->generate("admin_article_new")  ?>" class="dropdown-item">add Article</a></li>
+                        <li><a href="<?= $router->generate("admin_user_new")  ?>" class="dropdown-item">add user</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="<?= $router->generate("admin_article_new")  ?>" class="nav-link">Ajouter article</a>
                 </li>
@@ -51,6 +60,6 @@
                     <a href="<?= $router->generate("logout")  ?>" class="nav-link">Déconnexion</a>
                 </li>
             </ul>
-            <?php //  endif ?>
+            <?php endif ?>
         </nav>
     </header>
