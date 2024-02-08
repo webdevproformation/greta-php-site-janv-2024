@@ -6,9 +6,27 @@
 
     {# {{ form(form) }} #}
      
-    {{ form_start(form) }}
+   {#  {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit">
+    {{ form_end(form) }} #}
+
+    {{ form_start(form) }}
+        <div class="row">
+            <div class="col-6">
+                {{ form_row(form.prenom) }}
+            </div>
+             <div class="col-6">
+                {{ form_row(form.nom , { required : false}) }}
+            </div>
+            <div class="col-12">
+                {{ form_row(form.description , { attr : { rows : 10 , placeholder : 'votre CV !'}   }) }}
+            </div>
+            <div class="col-12 text-end">
+                <input type="submit">
+            </div>
+        </div>
     {{ form_end(form) }}
+
      
 {% endblock %}

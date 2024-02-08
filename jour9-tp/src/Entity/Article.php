@@ -20,6 +20,8 @@ class Article
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $contenu = null;
 
+   
+
     public function getId(): ?int
     {
         return $this->id;
