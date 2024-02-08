@@ -1,9 +1,14 @@
 <?php 
 namespace App\Controller ;
 
+use App\Entity\Article;
+use App\Form\ArticleType;
 use App\Repository\EtudiantRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 class Exo1Controller extends AbstractController{
     #[Route("/exo1",name:"exo1" )]
     public function test(){
@@ -35,5 +40,27 @@ class Exo1Controller extends AbstractController{
     public function exo4( EtudiantRepository $etudiantRepo ){
         $data["etudiants"] = $etudiantRepo->findAll(); 
         return $this->render("exo/exo4.html.twig" , $data); 
+    }
+
+    #[Route(path : "/exo5" , name : "exo5")]
+    public function exo5(Request $request , EntityManagerInterface $em){
+
+        $article = new Article(); 
+        $form = $this->createForm(ArticleType::class , $article); 
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $em->persist($article);
+            $em->flush(); 
+
+            return $this->redirectToRoute("articles");
+            // Entity => propriété + setter + getter
+            // Repository => SELECT 
+            // EntityManagerInterface UPDATE / DELETE / INSERT 
+        }
+
+        return $this->render("exo/exo5.html.twig", [ "form" => $form ]);
+
     }
 }

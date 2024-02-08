@@ -65,6 +65,7 @@ class HomeController extends AbstractController {
         if($form->isSubmitted() && $form->isValid()){ 
             // if(!empty($_POST) && tous les tests)
             // INSERT 
+            
             $em->persist($etudiant); // si id === null => INSERT id === 1 => UPDATE
             $em->flush(); 
             return $this->redirectToRoute("exo4"); // redirection vers la page exo4 

@@ -29,3 +29,10 @@ nouveau fichier / dossier  src/Form/EtudiantType.php
 
 
 $_POST => Request
+
+cas pratique :
+cas pratique créer un nouvelle route exo5 qui affiche un formulaire d'ajout d'article
+utiliser les commandes et le controlleur pour générer cette page 
+une fois que l'utilisateur a rempli le formulaire => redirigé vers la page /articles
+
+php bin/console make:form
