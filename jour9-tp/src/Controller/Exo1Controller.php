@@ -1,5 +1,7 @@
 <?php 
 namespace App\Controller ;
+
+use App\Repository\EtudiantRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 class Exo1Controller extends AbstractController{
@@ -27,5 +29,11 @@ class Exo1Controller extends AbstractController{
             "formations" => ["JS", "PHP" , "Angular", "Symfony"]
         ];
         return $this->render("exo/exo3.html.twig" , $data); 
+    }
+
+    #[Route(path : "/exo4" , name:"exo4")]
+    public function exo4( EtudiantRepository $etudiantRepo ){
+        $data["etudiants"] = $etudiantRepo->findAll(); 
+        return $this->render("exo/exo4.html.twig" , $data); 
     }
 }

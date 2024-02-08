@@ -40,3 +40,4 @@ MVC
 C => src/Controller/...Controller.php => verifier dans le profiler
 M => Entite + Repository => pour accéder aux informations aux BDD
 V => render => /templates
+

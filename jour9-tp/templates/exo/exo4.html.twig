@@ -1,0 +1,11 @@
+{% extends "bootstrap.html.twig" %}
+
+{% block body %}
+    <h1>Exo4 : afficher des étudiants</h1>
+    {% for key , value in etudiants %}
+        <article>
+            <h2>{{ value.prenom }} {{ value.nom}}</h2>
+            <p>{{ value.description }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}
