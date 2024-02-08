@@ -44,7 +44,7 @@ class HomeController extends AbstractController {
 
     #[Route(path : "/articles" , name:"articles")]
     public function articles( ArticleRepository $articlesRepository ){
-        $data["articles"] = $articlesRepository->findAll();  
+        $data["articles"] = $articlesRepository->findAll(); // SELECT * FROM article  
         return $this->render("front/articles.html.twig" , $data); 
     }
 
