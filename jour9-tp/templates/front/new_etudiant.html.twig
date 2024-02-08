@@ -1,0 +1,14 @@
+{% extends "bootstrap.html.twig" %}
+
+{% block body %}
+
+    <h1>Créer un nouveau profil étudiant</h1>
+
+    {# {{ form(form) }} #}
+     
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit">
+    {{ form_end(form) }}
+     
+{% endblock %}

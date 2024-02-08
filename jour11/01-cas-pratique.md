@@ -42,3 +42,8 @@ phpmyadmin INSERER deux lignes dans la table
 créer une méthode => exo4 dans le controller ExoController
 utiliser le Repository de Etudiant pour récupérer tous les lignes de la table 
 afficher dans une vue exo/exo4.html.twig l'ensemble des informations des etudiants
+
+
+http://192.168.15.22/phpmyadmin
+
+http://192.168.15.22/jour9-tp/exo2

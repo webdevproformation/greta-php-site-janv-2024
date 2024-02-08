@@ -2,9 +2,14 @@
 
 namespace App\Controller ;
 
+use App\Entity\Etudiant;
+use App\Form\EtudiantType;
 use App\Repository\ArticleRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController {
 
@@ -46,6 +51,25 @@ class HomeController extends AbstractController {
     public function articles( ArticleRepository $articlesRepository ){
         $data["articles"] = $articlesRepository->findAll(); // SELECT * FROM article  
         return $this->render("front/articles.html.twig" , $data); 
+    }
+
+    #[Route(path : "/new_etudiant" , name:"new_etudiant")]
+    public function new_etudiant( Request $request , EntityManagerInterface $em ){
+        // dd($request); 
+        $data = [];
+        $etudiant = new Etudiant(); // etudiant vide 
+        $form = $this->createForm(EtudiantType::class, $etudiant); 
+        // créer le formulaire
+        $data["form"] = $form ; // que l'on va envoyer à la vue 
+        $form->handleRequest($request) ; // récupérer le $_POST ET remplir l'entité 
+        if($form->isSubmitted() && $form->isValid()){ 
+            // if(!empty($_POST) && tous les tests)
+            // INSERT 
+            $em->persist($etudiant); // si id === null => INSERT id === 1 => UPDATE
+            $em->flush(); 
+            return $this->redirectToRoute("exo4"); // redirection vers la page exo4 
+        }
+        return $this->render("front/new_etudiant.html.twig" , $data); 
     }
 
 }
