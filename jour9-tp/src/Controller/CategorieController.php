@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/categorie')]
-#[IsGranted('USER_ROLE')]
+#[IsGranted('ROLE_USER')]
 class CategorieController extends AbstractController
 {
     // http://192.168.15.22/jour9-tp/categorie/
