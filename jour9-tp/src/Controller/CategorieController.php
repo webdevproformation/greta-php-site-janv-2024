@@ -43,12 +43,34 @@ class CategorieController extends AbstractController
     }
 
     #[Route(path : "/update/{id}", name: "update_categorie")]
-    public function update(int $id){
-        dd("mettre à jour la catégorie $id");
+    public function update(
+            int $id , 
+            CategorieRepository $categorieRepository ,
+            Request $request , // $_POST
+            EntityManagerInterface $em  // objet permettant de faire UPDATE en SQL 
+        ){
+       $categorie = $categorieRepository->findOneBy([ "id" => $id ]); 
+                    // SELECT * FROM categorie WHERE id = 5
+        // dd($categorie);
+        $form = $this->createForm(CategorieType::class , $categorie , ["label" => "modifier"]);
+        $form->handleRequest($request) ; // $_POST et remplir le formulaire et $categorie
+        if($form->isSubmitted() && $form->isValid()){
+            $em->persist($categorie); // UPDATE SQL
+            $em->flush();   // UPDATE SQL
+            return $this->redirectToRoute("index_categorie");
+        }
+        return $this->render("categorie/update.html.twig", ["form" => $form]);
     }
 
     #[Route(path : "/delete/{id}", name: "delete_categorie")]
-    public function delete (int $id){
-        dd("supprimer la catégorie $id");
+    public function delete (
+            int $id ,
+            EntityManagerInterface $em,
+            CategorieRepository $categorieRepository
+        ){
+        $categorie = $categorieRepository->findOneBy(["id" => $id]);
+        $em->remove($categorie);
+        $em->flush();
+        return $this->redirectToRoute("index_categorie");
     }
 }

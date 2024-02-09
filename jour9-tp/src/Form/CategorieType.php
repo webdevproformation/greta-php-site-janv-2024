@@ -16,7 +16,7 @@ class CategorieType extends AbstractType
             ->add('nom')
             ->add('description')
             ->add('auteur')
-            ->add("creer" , SubmitType::class , ["label"=> "créer" , "attr" => [ "class" => "btn btn-outline-danger" ]])
+            ->add("creer" , SubmitType::class , ["label"=> isset($options["label"]) ? $options["label"] : "créer" , "attr" => [ "class" => "btn btn-outline-danger" ]])
         ;
     }
 

@@ -100,3 +100,21 @@ public function page( ArticleRepository $articleRepo  ){
 http://192.168.15.22/phpmyadmin
 http://192.168.15.22/jour9-tp/exo2
 
+
+// 
+si je veux modifier une ligne dans une table 
+
+? récupérer la ligne 
+SELECT * FROM categorie WHERE id = 5
+
+=> insérer dans le formulaire 
+
+=> l'utilisateur va modifier les valeurs dans le formulaire 
+=> Submit 
+
+=> if (!empty($_POST))
+=> récupérer les valeurs du $_POST
+
+=> UPDATE categorie SET titre = 'nouvelle valeur' ...
+        WHERE id = 5 ;  
+
