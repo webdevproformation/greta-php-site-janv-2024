@@ -36,3 +36,7 @@ utiliser les commandes et le controlleur pour générer cette page
 une fois que l'utilisateur a rempli le formulaire => redirigé vers la page /articles
 
 php bin/console make:form
+
+cas pratique : 
+
+dans le formulaire Ajouter un article 
