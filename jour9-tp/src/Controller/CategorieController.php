@@ -10,9 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/categorie')]
+#[IsGranted('USER_ROLE')]
 class CategorieController extends AbstractController
 {
     // http://192.168.15.22/jour9-tp/categorie/
@@ -63,10 +64,12 @@ class CategorieController extends AbstractController
     }
 
     #[Route(path : "/delete/{id}", name: "delete_categorie")]
+    
     public function delete (
-            int $id ,
+            
             EntityManagerInterface $em,
-            CategorieRepository $categorieRepository
+            CategorieRepository $categorieRepository,
+            int $id ,
         ){
         $categorie = $categorieRepository->findOneBy(["id" => $id]);
         $em->remove($categorie);
