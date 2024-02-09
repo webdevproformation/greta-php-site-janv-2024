@@ -41,4 +41,14 @@ class CategorieController extends AbstractController
 
         return $this->render("categorie/new.html.twig", [ "form" => $form ]);
     }
+
+    #[Route(path : "/update/{id}", name: "update_categorie")]
+    public function update(int $id){
+        dd("mettre à jour la catégorie $id");
+    }
+
+    #[Route(path : "/delete/{id}", name: "delete_categorie")]
+    public function delete (int $id){
+        dd("supprimer la catégorie $id");
+    }
 }

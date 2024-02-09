@@ -19,7 +19,10 @@
                     <td>{{ value.nom }}</td>
                     <td>{{ value.description }}</td>
                     <td>{{ value.auteur }}</td>
-                    <td>xxxxxxxxx</td>
+                    <td>
+                        <a href="{{ path("update_categorie", { id : value.id }) }}" class="btn btn-warning">modifier</a>
+                         <a href="{{ path("delete_categorie", { id : value.id }) }}" class="btn btn-danger ms-3">supprimer</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
