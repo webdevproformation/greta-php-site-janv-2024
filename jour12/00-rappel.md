@@ -96,3 +96,6 @@ public function page( ArticleRepository $articleRepo  ){
 // créer un page qui permet d'ajouter des catégories via un formulaire 
 // page s'appelle exo6
 // contient un formulaire avec autant de champ que l'on a de colonne dans la table 
+
+http://192.168.15.22/phpmyadmin
+http://192.168.15.22/jour9-tp/exo2
