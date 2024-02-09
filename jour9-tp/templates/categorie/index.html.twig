@@ -1,0 +1,31 @@
+{% extends "bootstrap.html.twig" %}
+
+{% block body %}
+    
+    <h1>Liste de toutes les catégories disponibles</h1>
+    
+    <a href="{{ path("new_categorie") }}" class="btn btn-success my-3"> Ajouter une nouvelle catégorie</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>nom</th>
+                <th>description</th>
+                <th>auteur</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key , value in categories %}
+                <tr>
+                    <td>{{ value.id }}</td>
+                    <td>{{ value.nom }}</td>
+                    <td>{{ value.description }}</td>
+                    <td>{{ value.auteur }}</td>
+                    <td>xxxxxxxxx</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
